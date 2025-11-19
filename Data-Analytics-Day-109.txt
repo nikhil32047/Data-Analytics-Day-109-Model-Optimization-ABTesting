@@ -1,0 +1,79 @@
+Machine Learning: Model Optimization & A/B Testing
+
+1️⃣ Grid Search & Random Search (Hyperparameter Tuning)
+===========================================================
+What it is:
+Hyperparameter tuning helps improve model performance by testing different combinations of parameters.
+
+⭐ Grid Search
+Tries every combination
+Very accurate
+Slow for large parameter sets
+
+⭐ Random Search
+Tries random combinations
+Much faster
+Covers wide search space
+
+Example
+Tuning RandomForest:
+Grid Search tests all possible values of trees (50,100,200) × depth (5,10,15)
+Random Search picks random combos like (100,10), (200,5)
+Real World: E-commerce uses tuning to improve product recommendation accuracy.
+
+
+2️⃣ Cross-Validation Techniques
+====================================
+Cross-validation ensures your model performs well on unseen data.
+Common Methods
+K-Fold CV → Most used
+Stratified K-Fold → Keeps class ratios same
+TimeSeriesSplit → For sequential data
+Real World
+Banks use K-Fold CV to ensure loan default prediction models don’t overfit.
+
+
+3️⃣ A/B Testing for Business Decisions
+=======================================
+Used to compare two versions (A & B) to find which performs better.
+
+Steps
+Define goal (clicks, signups, revenue)
+Split users 50/50
+Show A to one group, B to another
+Analyze metrics
+Choose winner
+Real World
+Swiggy tests two versions of the checkout page → chooses the one with higher order completion rate.
+
+
+4️⃣ Feature Selection Methods
+====================================
+Used to improve accuracy & reduce overfitting.
+
+Types
+Filter Methods → Correlation, Chi-square
+Wrapper Methods → RFE
+Embedded Methods → Lasso regression
+Real World
+Marketing model might remove irrelevant features like "browser theme," keeping only impactful ones like "session duration."
+
+
+5️⃣ Case Study — Conversion Rate Optimization
+=================================================
+Problem
+A company wants to increase conversions from 4% → 5%.
+
+Process
+Run A/B test on new UI
+Train ML model to predict conversion
+Use Random Search to tune model
+Apply feature selection to reduce noise
+
+Result
+Conversion improved to 5.3%
+Model accuracy increased from 82% → 89%
+Reduced features from 30 → 14, making model faster
+
+
+
